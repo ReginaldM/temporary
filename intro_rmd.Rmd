@@ -7,30 +7,7 @@ output:
     # logo: logo.png
 
 ---
-
-<style>
-  body { 
-    background-color:lightgrey
-    }
-    
-  .gdbar img {
-    width: 200px !important;
-    height: 18px !important;
-  }
-  aside.gdbar {
-    height: 97px;
-    width: 215px;
-    position: absolute;
-    left: 690px;
-    top: 10px;
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-    -ms-border-radius: 0 10px 10px 0;
-    -o-border-radius: 0 10px 10px 0;
-    border-radius: 0 10px 10px 0;
-    background: white;
-    transition: none;
-  }
+WOOOOOhOOOOOO
   .title-slide {
     }
   slide {
