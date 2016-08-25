@@ -1,0 +1,150 @@
+---
+title: "R Markdown"
+date: "August 18, 2016"
+output: 
+  html_notebook
+  # ioslides_presentation:
+    # logo: logo.png
+
+---
+
+<style>
+  body { 
+    background-color:lightgrey
+    }
+    
+  .gdbar img {
+    width: 200px !important;
+    height: 18px !important;
+  }
+  aside.gdbar {
+    height: 97px;
+    width: 215px;
+    position: absolute;
+    left: 690px;
+    top: 10px;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+    background: white;
+    transition: none;
+  }
+  .title-slide {
+    }
+  slide {
+    background-color:white;
+    }
+  slides > slide:not(.nobackground):before {
+    width: 200px;
+    height: 18px;
+    background-size: 200px 18px;
+    }
+    
+</style>
+
+```{r setup, include=FALSE}
+library(knitr)
+library('ggplot2')
+library(dplyr)
+
+knitr::opts_chunk$set(echo = FALSE)
+knitr::knit_engines$set('python')
+```
+
+## R Markdown  
+
+Rmd is a format for writing reproducible and dynamic reports with R.
+
+
+
+Cheat sheets and reference pages can be found on RStudio website
+
+[Rmd Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+[Rmd Reference Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+[CSS Default](https://github.com/rstudio/rmarkdown/blob/master/inst/rmd/ioslides/ioslides-13.5.1/theme/css/default.css)
+
+## Best Used For
+
+- Documentation 
+- Reports
+- Presentations
+- RODB -> SQL queries 
+- Interactive Notebook
+
+
+
+## Rendered Document Types
+
+- HTML 
+- HTML notebook (interactive like Jupyter or Zeppelin) NEW!!!
+- PDF
+- word 
+- md 
+- slides (isoslides, beamer, slidy)
+
+## Useful Tools
+
+- Creating Tables
+- Images
+- Hyperlinks 
+- $\LaTeX$
+- Itemized lists
+- Code chunk options (running, supress warnings, display, code decoration)
+- Inline code
+- HTML widgets - allow interactive plots (dygraph, d3heatmaps, shiny)
+
+
+
+
+## Different Languages in Rmd
+You can additionally start writing code by changing the engine to the language of choice. Default language is set to R.
+
+
+```{r different_langaguages, echo = TRUE}
+names(knitr::knit_engines$get()) 
+```
+
+## Python in Rmd
+
+```{python, echo = TRUE}
+x = 'jaclyn'
+h = 'Hello, '
+print h + x
+
+```
+
+
+## Bringing in Data
+
+```{r, echo = FALSE}
+# echo = FALSE
+head(pressure)
+```
+
+## Bringing in Data w/ Code
+
+```{r, echo =TRUE}
+# echo = TRUE
+head(pressure)
+```
+
+
+## Slide with Plot
+
+```{r}
+plot(pressure)
+```
+
+
+## Downloading R Notebook
+
+devtools::install_github("rstudio/rmarkdown")
+
+Benefits: Version Control with retained output .Rproj.user
+
+
+
